@@ -17,10 +17,12 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="container-fluid">
         <SearchBar onSubmit={this.handleSearchSubmit} />
         Found: {this.state.books.length} books
-        <BookList books={this.state.books} />
+        <div className="row">
+          <BookList books={this.state.books} />
+        </div>
       </div>
     )
   }
