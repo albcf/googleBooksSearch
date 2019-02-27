@@ -14,9 +14,9 @@ const BookDetails = (props) => {
 }
 
 function authorInfo(authorArray) {
-  const authors = authorArray.map((author) => {
+  const authors = authorArray ? authorArray.map((author) => {
     return (<li>{author}</li>);
-  });
+  }) : 'N/A';
 
   return authors;
 }
