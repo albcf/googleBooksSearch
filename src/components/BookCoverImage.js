@@ -10,7 +10,7 @@ class BookCoverImage extends React.Component {
   }
   render() {
     return (
-      <img className="thumbnail-fixed"
+      <img className="thumbnail-fixed img-thumbnail"
            src={this.state.thumbnail}
            alt='book cover'
            ></img>
