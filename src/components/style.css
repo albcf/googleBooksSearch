@@ -1,3 +1,7 @@
+.container-fluid {
+   max-width:900px;
+}
+
 .thumbnail-fixed {
   height: 165px;
   width: 128px;
