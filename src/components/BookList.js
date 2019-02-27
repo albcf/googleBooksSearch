@@ -1,5 +1,7 @@
 import React from 'react';
 import BookCoverImage from './BookCoverImage';
+import BookLinks from './BookLinks';
+import BookDetails from './BookDetails';
 
 const BookList = (props) => {
   const books = props.books.map((book) => {
@@ -9,15 +11,9 @@ const BookList = (props) => {
         <BookCoverImage {...book.volumeInfo} />
 
         <div className="card-body">
-          <h4>{book.volumeInfo.title ? book.volumeInfo.title : 'N/A'}</h4>
-          <h6>{book.volumeInfo.publisher ? book.volumeInfo.publisher : 'N/A'}</h6>
 
-          <div className="d-flex justify-content-between align-items-center">
-            <div className="button-group">
-              <a href={book.volumeInfo.previewLink} className="btn btn-sm btn-outline-secondary">Preview</a>
-              <a href={book.volumeInfo.infoLink} className="btn btn-sm btn-outline-secondary">More information</a>
-            </div>
-          </div>
+          <BookDetails volumeInfo={book.volumeInfo} />
+          <BookLinks volumeInfo={book.volumeInfo} />
 
         </div>
 
@@ -25,6 +21,7 @@ const BookList = (props) => {
     </div>
     );
   });
+
 
   return books;
 };

@@ -19,7 +19,7 @@ class App extends React.Component {
     return (
       <div className="container-fluid">
         <SearchBar onSubmit={this.handleSearchSubmit} />
-        Found: {this.state.books.length} books
+        
         <div className="row">
           <BookList books={this.state.books} />
         </div>
