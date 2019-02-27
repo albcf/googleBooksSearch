@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 
 class BookCoverImage extends React.Component {
   constructor(props){
@@ -9,7 +10,10 @@ class BookCoverImage extends React.Component {
   }
   render() {
     return (
-      <img src={this.state.thumbnail} alt='book cover' ></img>
+      <img className="thumbnail-fixed"
+           src={this.state.thumbnail}
+           alt='book cover'
+           ></img>
     );
   }
 
